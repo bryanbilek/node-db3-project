@@ -31,3 +31,11 @@ join customer as c
 on o.customerid = c.id
 join employee as e
 on o.employeeid = e.id
+
+--STRETCH #1
+--Displays CategoryName and a new column called Count that shows how many products are in each category. Shows 8 records.
+
+select c.categoryname, count(p.productid) as Count
+from categories as c
+join products as p
+on p.categoryid = c.categoryid;
