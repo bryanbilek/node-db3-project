@@ -38,4 +38,5 @@ on o.employeeid = e.id
 select c.categoryname, count(p.productid) as Count
 from categories as c
 join products as p
-on p.categoryid = c.categoryid;
+on p.categoryid = c.categoryid
+group by p.categoryid;
